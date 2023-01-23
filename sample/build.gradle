@@ -36,7 +36,6 @@ android {
 
 dependencies {
     implementation project(':format-watcher')
-
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
     implementation "com.google.android.material:material:$materialVersion"
     testImplementation "junit:junit:$jUnitVerstion"

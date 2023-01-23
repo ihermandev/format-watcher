@@ -21,7 +21,6 @@ android {
 }
 
 dependencies {
-
     androidTestImplementation "androidx.test.ext:junit:$jUnitExtVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVersion"
 }
@@ -29,7 +28,7 @@ dependencies {
 publishing {
     publications {
         release(MavenPublication) {
-            groupId = 'om.github.ihermandev'
+            groupId = 'com.github.ihermandev'
             artifactId = 'format-watcher'
             version = versionName
 

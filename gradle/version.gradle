@@ -6,7 +6,7 @@ ext {
 
     /** Application **/
     versionCode = 1
-    versionName = "1.0.0"
+    versionName = "1.0.1"
 
     /** Environment **/
     toolsVersion = "7.3.1"
