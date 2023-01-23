@@ -1,0 +1,26 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply from: "$rootDir/gradle/version.gradle"
+
+android {
+    namespace 'com.github.ihermandev.formatwatcher'
+    compileSdk androidCompileSdk
+
+    defaultConfig {
+        minSdk androidMinSdk
+        targetSdk androidTargetSdk
+        versionCode versionCode
+        versionName versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+}
+
+dependencies {
+
+    androidTestImplementation "androidx.test.ext:junit:$jUnitExtVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVersion"
+}

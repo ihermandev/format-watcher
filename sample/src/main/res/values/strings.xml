@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FormatWatcher</string>
+    <string name="format_set1">"+#(###)-###-##-##"</string>
+    <string name="format_set2">"**/**/****"</string>
+    <string name="format_set3">"##:##:##"</string>
+    <string name="format_set4">"September #"</string>
+    <string name="format_set5">"$ **"</string>
+    <string name="format_set6">"##-###"</string>
+    <string name="format_set7">"#### #### #### ####"</string>
+</resources>
