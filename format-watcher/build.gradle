@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
 apply from: "$rootDir/gradle/version.gradle"
@@ -23,4 +24,18 @@ dependencies {
 
     androidTestImplementation "androidx.test.ext:junit:$jUnitExtVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVersion"
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'om.github.ihermandev'
+            artifactId = 'format-watcher'
+            version = versionName
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
 }
