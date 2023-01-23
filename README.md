@@ -31,5 +31,7 @@ request on the [GitHub repository](https://github.com/ihermandev)
 
 ### Demo
 
+https://user-images.githubusercontent.com/25265967/214153227-545a7f2f-d04f-4fc1-abec-76e4f0e129ae.mp4
+
 ## License
-This library is released under the Apache 2.0 license. See the [LICENSE] file for more information.
+This library is released under the Apache 2.0 license. See the [LICENSE](https://github.com/ihermandev/FormatWatcher/blob/master/LICENSE.md) file for more information.
