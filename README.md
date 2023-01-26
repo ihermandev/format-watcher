@@ -29,7 +29,7 @@ You can customize the behavior of the FormatWatcher class by changing the format
 placeholder character to match your specific requirements.
 ## Contribute
 If you find any bugs or have any suggestions for improvements, please open an issue or create a pull
-request on the [GitHub repository](https://github.com/ihermandev)
+request on the [GitHub repository](https://github.com/ihermandev/format-watcher)
 
 ### Demo
 
