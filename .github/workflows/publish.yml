@@ -20,6 +20,9 @@ jobs:
           distribution: adopt
           java-version: 11
 
+      - name: Grand execute permissions to gradlew
+        run: chmod +x gradlew
+
         # Builds the release artifacts
       - name: Release build
         run: ./gradlew :format-watcher:assembleRelease
