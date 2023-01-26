@@ -2,8 +2,8 @@
 ![version](https://img.shields.io/badge/format--watcher-v1.0.0-blue)
 
 The FormatWatcher library provides a simple and easy-to-use way to apply predefined formatting to user 
-input for Android EditText. The formatter is separator sensitive which means that if a separator is 
-entered manually, format will not be applied again.
+input for Android EditText. The formatter is separator sensitive, meaning if a separator is entered 
+manually, the format will not be applied again.
 ## Installation
 To install the library use Gradle:
 
@@ -30,7 +30,6 @@ placeholder character to match your specific requirements.
 ## Contribute
 If you find any bugs or have any suggestions for improvements, please open an issue or create a pull
 request on the [GitHub repository](https://github.com/ihermandev/format-watcher)
-
 ### Demo
 
 https://user-images.githubusercontent.com/25265967/214968831-2b1d81d0-0cfe-42a2-a2af-f35ec92307de.mp4
