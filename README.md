@@ -1,5 +1,5 @@
 # FormatWatcher
-![version](https://img.shields.io/badge/format--watcher-v1.0.0-blue)
+![version](https://img.shields.io/badge/format--watcher-v1.0.1-blue)
 
 The FormatWatcher library provides a simple and easy-to-use way to apply predefined formatting to user 
 input for Android EditText. The formatter is separator sensitive, meaning if a separator is entered 
@@ -13,17 +13,25 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.github.ihermandev:format-watcher:1.0.0'
+    implementation 'io.github.ihermandev:format-watcher:1.0.1'
 }
 ```
 ## Usage
-Simply create a new instance of the FormatWatcher and set it as the TextWatcher for the EditText.
+Simply create a new instance of the `FormatWatcher` and set it as the `TextWatcher` interface for 
+the `EditText`.
 ```kotlin
 val formatter = FormatWatcher("###-##-####", '#')
 editText.addTextChangedListener(formatter)
 ```
-The first argument passed to the FormatWatcher constructor is the format string to be applied to the 
+The first argument passed to the `FormatWatcher` constructor is the format string to be applied to the 
 text, the second argument is the character to be used as a placeholder in the format string.
+
+In order to obtain the formatted or raw input you can call `currentInput` and `rawInput` accordingly
+via `FormatWatcher` instance.
+```kotlin
+formatter.currentInput
+formatter.rawInput
+```
 ## Customization
 You can customize the behavior of the FormatWatcher class by changing the format string, and the 
 placeholder character to match your specific requirements.

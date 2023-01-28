@@ -35,6 +35,17 @@ class FormatWatcher(
         format.length
     }
 
+    // Current formatted editable input
+    var currentInput = ""
+        private set
+
+    // Raw input without format applied
+    val rawInput: String
+        get() = if (currentInput.isNotEmpty()) {
+            getRawInput(currentInput)
+        } else currentInput
+
+
     /**
      * @see [android.text.TextWatcher.onTextChanged]
      */
@@ -58,7 +69,10 @@ class FormatWatcher(
         // Check if the format is already in use
         if (isFormatApplying) return
         // Check if the editable is removing
-        if (isCharRemoving) return
+        if (isCharRemoving) {
+            currentInput = editable.toString()
+            return
+        }
 
         isFormatApplying = true
 
@@ -87,6 +101,8 @@ class FormatWatcher(
             }
 
         }
+
+        currentInput = editable.toString()
         // Reset flags
         isFormatApplying = false
         isInputCopied = false
@@ -116,6 +132,28 @@ class FormatWatcher(
                 return@forEachIndexed
             }
         }
+    }
+
+    /**
+     * Removes all non-placeholder character
+     *
+     * @param input representing text from which the formatting should be removed.
+     */
+    private fun getRawInput(input: String): String {
+        val output = StringBuilder()
+
+        for (i in input.indices) {
+            val inputChar = input[i]
+            if (i < formatLength) {
+                if (format[i] == placeholderInFormat) {
+                    output.append(inputChar)
+                }
+            } else {
+                output.append(inputChar)
+            }
+        }
+
+        return output.toString()
     }
 
     companion object {
