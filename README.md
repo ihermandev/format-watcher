@@ -26,7 +26,7 @@ editText.addTextChangedListener(formatter)
 The first argument passed to the `FormatWatcher` constructor is the format string to be applied to the 
 text, the second argument is the character to be used as a placeholder in the format string.
 
-In order to obtain the formatted or raw input you can call `currentInput` and `rawInput` accordingly
+In order to obtain the formatted or raw input `String` you can call `currentInput` and `rawInput` accordingly
 via `FormatWatcher` instance.
 ```kotlin
 formatter.currentInput
@@ -40,7 +40,7 @@ If you find any bugs or have any suggestions for improvements, please open an is
 request on the [GitHub repository](https://github.com/ihermandev/format-watcher)
 ### Demo
 
-https://user-images.githubusercontent.com/25265967/214968831-2b1d81d0-0cfe-42a2-a2af-f35ec92307de.mp4
+https://user-images.githubusercontent.com/25265967/215283143-7a502053-6922-4120-84e9-4390b2157c03.mp4
 
 ## License
 This library is released under the Apache 2.0 license. See the [LICENSE](https://github.com/ihermandev/FormatWatcher/blob/master/LICENSE.md) file for more information.
